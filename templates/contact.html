@@ -5,11 +5,12 @@
 	<div class="row">
 		<div class="col-lg-8 col-md-10 mx-auto">
 
-            {% with messages get_flashed_messages() %}
+            {% with messages = get_flashed_messages() %}
                 {% if messages %}
                     <ul class="flashes">
                         {% for message in messages %}
-                        <li>{{ message }}</li>
+                            <li>{{ message }}</li>
+                        {% endfor %}
                     </ul>
                 {% endif %}
             {% endwith %}

@@ -30,7 +30,7 @@ def about_member(member_name):
         for obj in data:
             if obj["url"] == member_name:
                 member = obj
-    return render_template("member.html",member=member)
+    return render_template("member.html", member=member)
 
 
 @app.route("/contact", methods=["GET", "POST"])
@@ -44,6 +44,7 @@ def contact():
 @app.route("/careers")
 def careers():
     return render_template("careers.html", page_title="Careers")
+
 
 if __name__ == "__main__":
     app.run(
